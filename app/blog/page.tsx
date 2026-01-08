@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/blog';
 
 export default function BlogPage() {
-  const posts = getAllPosts();
+  const posts = getAllPosts("content/blog");
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">

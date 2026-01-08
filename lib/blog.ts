@@ -14,7 +14,8 @@ export interface BlogPost {
   content: string;
 }
 
-export function getAllPosts(): BlogPost[] {
+export function getAllPosts(fileName: string): BlogPost[] {
+    const blogDirectory = path.join(process.cwd(), fileName);
   // Get all markdown files
   const fileNames = fs.readdirSync(blogDirectory);
 
